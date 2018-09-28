@@ -124,7 +124,7 @@
 <meta property="og:description" content="1.配置全局信息 $ git config  --global  user.name  &amp;quot;****&amp;quot;      $ git config  --global  user.email &amp;quot; ******.com&amp;quot;  2.开始使用git1. 建仓 =&amp;gt; $ git  init 2. 加仓 =&amp;gt;  $ git add .  ( 后面的那个点是必须的 )">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/5/30/163b08b9e1f11564?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
-<meta property="og:updated_time" content="2018-09-28T08:23:13.494Z">
+<meta property="og:updated_time" content="2018-09-28T08:29:09.113Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的前端笔记之git篇">
 <meta name="twitter:description" content="1.配置全局信息 $ git config  --global  user.name  &amp;quot;****&amp;quot;      $ git config  --global  user.email &amp;quot; ******.com&amp;quot;  2.开始使用git1. 建仓 =&amp;gt; $ git  init 2. 加仓 =&amp;gt;  $ git add .  ( 后面的那个点是必须的 )">
@@ -409,7 +409,7 @@
                 
               
 
-              <time title="创建时间：2018-09-28 16:11:57 / 修改时间：16:23:13" itemprop="dateCreated datePublished" datetime="2018-09-28T16:11:57+08:00">2018-09-28</time>
+              <time title="创建时间：2018-09-28 16:11:57 / 修改时间：16:29:09" itemprop="dateCreated datePublished" datetime="2018-09-28T16:11:57+08:00">2018-09-28</time>
             
             
               
@@ -484,18 +484,40 @@ $ git config  --global  user.email &quot; ******.com&quot;
 <pre><code>$  git  remote  add   origin  https：// github . ****.git
 </code></pre><p>   <em>4.1 可以删除别名 =&gt;</em> </p>
 <pre><code>$ git  remote remove 别名
-</code></pre><p><em>5. 从远程仓拉项目 =&gt;</em><br>$ git pull origin master<br><em>6. 上传到远程仓库 =&gt;</em><br>$ git push origin master</p>
-<ul>
-<li>报错的话 可以 =&gt;<br>$ git pull –rebase origin master<br><em>7 .查询历史日志 =&gt;</em><br>$ git reflog<br><em>8 .版本切换 =&gt;</em><br>$ git reset –hard 版本号</li>
+</code></pre><p><em>5. 从远程仓拉项目 =&gt;</em></p>
+<pre><code>$ git pull origin master
+</code></pre><p><em>6. 上传到远程仓库 =&gt;</em> </p>
+<pre><code>$ git push origin master
+</code></pre><ul>
+<li><p>报错的话 可以 =&gt;</p>
+<p>  $ git pull –rebase origin master</p>
+</li>
 </ul>
+<p><em>7 .查询历史日志 =&gt;</em> </p>
+<pre><code>$ git reflog
+</code></pre><p><em>8 .版本切换 =&gt;</em></p>
+<pre><code>$ git reset --hard 版本号
+</code></pre><hr>
 <p><strong>3.分支结构=&gt; 修bug 和 改新需求冲突时</strong></p>
-<p><em>1. 查看分支 =&gt;</em><br>$ git  branch<br><em>2 .创建分支 =&gt;</em><br>$ git  branch  分支名<br><em>3 .切换分支 =&gt;</em><br>$ git  chekout  分支名 （完成修改后，执行 git add . , git commit -m “”）<br><em>4 .合并分支 =&gt;</em><br>$ git merge 分支名  （合并之前要切回到master，用master merge 分支）</p>
+<p><em>1. 查看分支 =&gt;</em> </p>
+<pre><code>$ git  branch
+</code></pre><p><em>2 .创建分支 =&gt;</em> </p>
+<pre><code>$ git  branch  分支名
+</code></pre><p><em>3 .切换分支 =&gt;</em> </p>
+<pre><code>$ git  chekout  分支名 （完成修改后，执行 git add . , git commit -m &quot;&quot;）
+</code></pre><p><em>4 .合并分支 =&gt;</em> </p>
+<pre><code>$ git merge 分支名  （合并之前要切回到master，用master merge 分支）
+</code></pre><hr>
 <p><strong>4.配置公钥免登录</strong></p>
-<p><em>1. 删除远程别名 =&gt;</em><br>$ git  remote remove  别名<br><em>2 .更换远程ssh 地址 =&gt;</em><br>$ git remote add origin  @<em>**.ssh
-</em>3 .ssh 创建key =&gt;*</p>
+<p><em>1. 删除远程别名 =&gt;</em></p>
+<pre><code>$ git  remote remove  别名
+</code></pre><p><em>2 .更换远程ssh 地址 =&gt;</em> </p>
+<pre><code>$ git remote add origin  @***.ssh
+</code></pre><p><em>3 .ssh 创建key =&gt;</em></p>
 <pre><code>$ ssh-keygen -t rsa -C “config 的邮箱” （一路回车）
-</code></pre><p><em>4 .在git 中生成公钥的本地路径</em><br>在c盘（id-rsa.pub： 公钥）  在客户端配置公钥</p>
-
+</code></pre><p><em>4 .在git 中生成公钥的本地路径</em> </p>
+<pre><code>在c盘（id-rsa.pub： 公钥）  在客户端配置公钥
+</code></pre>
       
     </div>
 
